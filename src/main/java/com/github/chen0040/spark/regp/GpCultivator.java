@@ -26,7 +26,7 @@ import java.util.List;
 @Getter
 @Setter
 public class GpCultivator {
-   @Setter(AccessLevel.NONE)
+
    private int displayEvery = -1;
    private int populationSize = 1000;
    private int maxGenerations = 100;
@@ -35,6 +35,7 @@ public class GpCultivator {
    private Grok grok = null;
    private static final Logger logger = LoggerFactory.getLogger(GpCultivator.class);
 
+   @Setter(AccessLevel.NONE)
    private SparkTreeGP treeGP;
 
    public Grok fit(JavaRDD<String> trainingData) {
